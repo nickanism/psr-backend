@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'psr.wsgi.application'
 DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'DATABASE 명',
-        'USER': 'DB접속 계정명',
-        'PASSWORD': 'DB접속용 비밀번호',
-        'HOST': '실제 DB 주소',
+        'NAME': 'PSR',
+        'USER': 'root',
+        'PASSWORD': 'tjqmdnpdl',
+        'HOST': 'codesandwich.c7kz6o6m0eub.ap-northeast-2.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
