@@ -3,8 +3,8 @@ import jwt
 
 from django.views                   import View
 from django.http                    import JsonResponse, HttpResponse
-from django.utils.datastructures    import MultiValueDictKeyError
-from django.utils.deprecation import MiddlewareMixin
+
+from psr.settings                   import ALGORITHM
 
 
 def login_required(func):
