@@ -10,7 +10,7 @@ from django.core.exceptions         import ValidationError
 from django.contrib.auth.forms      import AuthenticationForm
 from django.contrib                 import messages
 from django.http                    import HttpResponseRedirect
-from django.contrib.auth.decorator  import login_required
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth            import login, logout, authenticate
 from django.contrib.auth.views      import LoginView
 
