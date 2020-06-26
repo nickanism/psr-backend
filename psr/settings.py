@@ -31,13 +31,14 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    #'django.contrib.admin',
-    #'django.contrib.auth',
+    'django.contrib.admin',
+    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders'
+    'corsheaders',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -45,7 +46,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     #'django.middleware.csrf.CsrfViewMiddleware',
-    #'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
@@ -79,16 +80,12 @@ WSGI_APPLICATION = 'psr.wsgi.application'
 DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'DATABASE 명',
-        'USER': 'DB접속 계정명',
-        'PASSWORD': 'DB접속용 비밀번호',
-        'HOST': '실제 DB 주소',
+        'NAME': 'PSR',
+        'USER': 'root',
+        'PASSWORD': 'tjqmdnpdl',
+        'HOST': 'codesandwich.c7kz6o6m0eub.ap-northeast-2.rds.amazonaws.com',
         'PORT': '3306',
     }
-}
-
-SECRET = {
-        'secret':'시크릿키',
 }
 
 
@@ -156,3 +153,7 @@ CORS_ALLOW_HEADERS = (
     'x-csrftoken',
     'x-requested-with',
 )
+
+AUTH_USER_MODEL = 'account.User'
+
+ALGORITHM = 'HS256'
