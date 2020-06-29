@@ -24,11 +24,13 @@ class URLSimilarProductView(View):
             "product_label2": product["product"]["productLabels"][2]["value"],
             "product_label3": product["product"]["productLabels"][3]["value"],
             "score"         : product["score"]
-        } for product in product_lst if product['score'] > 0.26]
+        } for product in product_lst if product["score"] > 0.26]
+        final_lst = [dict(t) for t in {tuple(d.items()) for d in high_rating_product_lst}]
 
-        return JsonResponse({"product": high_rating_product_lst})
+        return JsonResponse({"product": final_lst})
 
-    """
+class FileSimilarProductView(View):
+
     def post(self, request):
         img                     = request.FILES['file']
         with img.open('rb') as f:
@@ -45,4 +47,7 @@ class URLSimilarProductView(View):
                 "product_label3": product["product"]["productLabels"][3]["value"],
                 "score"         : product["score"]
             } for product in product_lst if product['score'] > 0.26]
-    """
+
+            final_lst = [dict(t) for t in {tuple(d.items()) for d in high_rating_product_lst}]
+
+            return JsonResponse({"product": final_lst})
