@@ -58,3 +58,6 @@ class User(AbstractBaseUser):
 class Count(models.Model):
     user        = models.ForeignKey('User', on_delete=models.CASCADE, related_name='counts')
     date_time   = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'counts'
