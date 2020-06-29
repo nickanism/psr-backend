@@ -9,8 +9,9 @@ from psr.settings           import SECRET_KEY, ALGORITHM
 from account.models         import User
 from utility.views          import login_required
 
-class SimilarProductView(View):
-    def get(self, request):
+class URLSimilarProductView(View):
+    
+    def post(self, request):
         img_url                 = json.loads(request.body)['img_url']
         url                     = 'http://49.247.197.215:8885/getSimilarProducts?APIKEY=wecode-test&contentUrl='
         response                = requests.get(url+img_url)
@@ -27,6 +28,7 @@ class SimilarProductView(View):
 
         return JsonResponse({"product": high_rating_product_lst})
 
+    """
     def post(self, request):
         img                     = request.FILES['file']
         with img.open('rb') as f:
@@ -43,3 +45,4 @@ class SimilarProductView(View):
                 "product_label3": product["product"]["productLabels"][3]["value"],
                 "score"         : product["score"]
             } for product in product_lst if product['score'] > 0.26]
+    """

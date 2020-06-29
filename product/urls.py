@@ -1,6 +1,6 @@
 from django.urls    import path, include
-from .views         import SimilarProductView
+from .views         import URLSimilarProductView
 
 urlpatterns = [
-    path('image', SimilarProductView.as_view())
+    path('image', URLSimilarProductView.as_view())
 ]
