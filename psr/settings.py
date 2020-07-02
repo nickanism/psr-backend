@@ -82,8 +82,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'PSR',
         'USER': 'root',
-        'PASSWORD': 'tjqmdnpdl',
-        'HOST': 'codesandwich.c7kz6o6m0eub.ap-northeast-2.rds.amazonaws.com',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
