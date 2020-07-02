@@ -25,7 +25,7 @@ SECRET_KEY = 'xa)#wmc$z5)_b5q(tv+8%*nlal2&h#=k57fs-wv@k_5nc+^o_0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['10.110.161.189', '49.247.134.244']
 
 
 # Application definition
@@ -81,7 +81,7 @@ DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'PSR',
-        'USER': 'root',
+        'USER': 'wecode',
         'PASSWORD': '1234',
         'HOST': 'localhost',
         'PORT': '3306',
