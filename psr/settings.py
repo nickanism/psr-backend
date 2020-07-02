@@ -81,9 +81,9 @@ DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'PSR',
-        'USER': 'wecode',
+        'USER': 'root',
         'PASSWORD': '1234',
-        'HOST': 'localhost',
+        'HOST': '49.247.134.244',
         'PORT': '3306',
     }
 }
