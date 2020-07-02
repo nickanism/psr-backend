@@ -36,7 +36,6 @@ class User(AbstractBaseUser):
     is_active   = models.BooleanField(default=True)
     is_admin    = models.BooleanField(default=False)
     level       = models.IntegerField(default=1)
-    count       = models.IntegerField(default=0)
 
     objects = UserManager()
 
@@ -55,3 +54,10 @@ class User(AbstractBaseUser):
     @property
     def is_staff(self):
         return self.is_admin
+
+class Count(models.Model):
+    user        = models.ForeignKey('User', on_delete=models.CASCADE, related_name='counts')
+    date_time   = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'counts'

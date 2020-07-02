@@ -55,3 +55,34 @@ class Shoes(models.Model):
 
     class Meta:
         db_table        = 'shoes'
+
+class ProductList(models.Model):
+    img_url             = CharField(max_length=200, null=True)
+    product_id          = CharField(max_length=100, null=True)
+    site_id             = CharField(max_length=100, null=True)
+    cat_key             = CharField(max_length=200, null=True)
+    product_name        = CharField(max_length=200, null=True)
+    category1           = CharField(max_length=200, null=True)
+    category2           = CharField(max_length=200, null=True)
+    category3           = CharField(max_length=200, null=True)
+    category4           = CharField(max_length=200, null=True)
+    p_key               = CharField(max_length=200, null=True)
+    p_category          = CharField(max_length=200, null=True)
+    click_url           = CharField(max_length=200, null=True)
+    click_url_m         = CharField(max_length=200, null=True)
+    product_price       = CharField(max_length=40, null=True)
+    price_pc            = CharField(max_length=200, null=True)
+    price_mobile        = CharField(max_length=200, null=True)
+    brand               = CharField(max_length=200, null=True)
+    import_flag         = CharField(max_length=200, null=True)
+    save_path           = CharField(max_length=100, null=True)
+    save_name           = CharField(max_length=100, null=True)
+    status              = IntegerField()
+    imp_cnt             = IntegerField()
+    click_cnt           = IntegerField()
+    cre_tt              = DateTimeField(auto_now=False, auto_now_add=False)
+    appr_tt             = DateTimeField(auto_now=False, auto_now_add=False)
+    rej_tt              = DateTimeField(auto_now=False, auto_now_add=False)
+
+    class Meta:
+        db_table        = 'product_list'
