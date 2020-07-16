@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'account',
+    'product'
 ]
 
 MIDDLEWARE = [
@@ -80,10 +81,10 @@ WSGI_APPLICATION = 'psr.wsgi.application'
 DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'PSR',
+        'NAME': 'piclick',
         'USER': 'wecode',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
+        'PASSWORD': 'wecode1234',
+        'HOST': '49.247.19.114',
         'PORT': '3306',
     }
 }
