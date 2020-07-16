@@ -4,7 +4,7 @@ import jwt
 from django.views                   import View
 from django.http                    import JsonResponse, HttpResponse
 
-from psr.settings                   import ALGORITHM
+from psr.settings                   import SECRET_KEY, ALGORITHM
 
 
 def login_required(func):

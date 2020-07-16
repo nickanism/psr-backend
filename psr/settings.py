@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'psr.wsgi.application'
 DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'PSR',
-        'USER': 'root',
-        'PASSWORD': '1234',
-        'HOST': '49.247.134.244',
+        'NAME': 'piclick',
+        'USER': 'wecode',
+        'PASSWORD': 'wecode1234',
+        'HOST': '49.247.19.114',
         'PORT': '3306',
     }
 }
