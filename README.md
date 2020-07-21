@@ -7,7 +7,7 @@
 
 # Demo
 ### Demo Video
-[![](https://images.velog.io/images/nickanism/post/2a3167ad-0ece-4060-be10-53ff66f173a7/Screen%20Shot%202020-07-21%20at%2010.53.36%20AM.png)](https://www.youtube.com/watch?v=WyCnexeF1dg&feature=youtu.be)
+[![](https://images.velog.io/images/nickanism/post/1eb95b2a-e8e0-47b8-b05e-a99a6c17b02b/Screen%20Shot%202020-07-21%20at%202.43.55%20PM.png)](https://www.youtube.com/watch?v=WyCnexeF1dg&feature=youtu.be)
 
 # Tech Stacks
 Implementation details can be found on the github links above.
